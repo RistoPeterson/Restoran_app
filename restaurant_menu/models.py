@@ -23,6 +23,7 @@ class Item(models.Model):
     status = models.IntegerField(choices=STATUS, default=1)
     date_created = models.DateTimeField(auto_now_add=True)
     date_updated = models.DateTimeField(auto_now=True)
+    image = models.ImageField(upload_to='uploads/', default='pizza1.jpeg')
 
     def __str__(self):
         return self.meal
